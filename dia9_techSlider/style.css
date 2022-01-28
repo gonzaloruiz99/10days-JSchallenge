@@ -1,0 +1,286 @@
+
+
+
+/* ------------------ Table of Contents ----------------- 
+0. Root
+1. Main config
+2. Green header
+7. Footer
+--------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+:root{
+    /*colors*/
+    --color1: #2c343b;
+    --color2: #d44457;
+    --background-color: #f2f2f2;
+    --background-header: #21272c;
+
+    --soft-grey: #3F4953;
+    --dark-grey: #333c44;
+    --darker-grey: #21272c;
+
+    /*fonts*/
+    --ff-primary:"Open Sans", sans-serif;
+    --ff-secondary:'Open Sans Condensed', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+}
+
+
+/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: var(--ff-primary);
+    font-size: 16px;
+}
+
+
+ul {
+  list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+/*fonts config*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.9rem;
+  font-family: var(--ff-primary);
+  color: #fff;
+}
+h1 {
+  font-size: 3.1rem;
+  font-weight: 300;
+  color: var(--background-color);
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+button{
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+}
+
+/* ------------------------------------- 2. NAV BAR ---------------------------------- */
+
+nav{
+  display: block;
+  width: 100%;
+  float: right;
+  text-align: right;
+}
+
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-header);
+    /*max-width: 1200px;*/
+    padding: 0.7rem  1.5rem ;
+}
+
+
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: #fff;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  margin-right: 10px;
+}
+.nav-toggle:hover {
+  color: var(--color2);
+}
+
+
+
+
+/* -- links --*/
+.links a {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  
+}
+
+.show-links {
+  height: 9rem;
+  background-color: var(--background-header);
+}
+
+.show-links a{
+    border-top: .5px solid #fff;
+    padding: 15px;
+}
+
+
+
+/* ------------------------------------- 3. SLIDER CONTAINER ---------------------------------- */
+
+.hero-slider{
+  height: 250px;
+  
+}
+
+.hero-slider li{
+  display: none;
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
+  color: var(--background-color);
+  height: 55px;
+  
+  background-color: var(--darker-grey);
+
+}
+
+.icons li{
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    /* padding-bottom: 15px; */
+    text-transform: lowercase;
+    font-size: 0.7rem;
+    padding-top: 20px;
+
+}
+
+.icon{
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.selected{
+  background-color: #fff;
+  border-top: 2px solid var(--color2);
+}
+.selected .icon{
+  color: var(--color2);
+}
+.selected a{
+  color:var(--background-header);
+  font-weight: 700;
+}
+
+
+/* ------------------------------------- 2. hero__slide ---------------------------------- */
+
+
+.btn-red{
+  display: inline-block;
+  margin-top: 0.8em;
+  background-color: var(--color2);
+  color: var(--background-color);
+}
+.btn-black{
+  display: inline-block;
+  margin-top: 0.8em;
+  background-color: var(--darker-grey);
+  color: var(--background-color);
+}
+
+/*individuales slides*/
+.intro-slider{
+  width: 100%;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-end;
+}
+
+.intro-slider button{
+  width: 220px;
+  height: 46px;
+}
+
+
+.tech1{
+  width: 100%;
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+.tech1 img{
+  position: relative;
+  bottom: 20%;
+  height: 30vw;
+  width: auto;
+}
+.tech1 .btn-red{
+  width: 85px;
+  height: 50px;
+  margin-right: 15px;
+}
+.tech1 .btn-black{
+  width: 140px;
+  height: 50px;
+}
+.info p {
+  margin: 20px 100px;
+}
+
+
+/* ------------------------------------- 3. description ---------------------------------- */
+
+.text-section{
+  background-color: var(--background-color);
+  height: 400px;
+}
+
+

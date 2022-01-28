@@ -1,0 +1,246 @@
+
+
+
+/* ------------------ Table of Contents ----------------- 
+0. Root
+1. Main config
+2. Green header
+7. Footer
+--------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    /*colors*/
+    --color1: #2c343b;
+    --color2: #d44457;
+    --background-color: #f2f2f2;
+    --background-header: #21272c;
+
+    --dark-violet: #363558;
+    --light-violet: #544173;
+    --greyish: #DADCDC;
+    --aqua-green: #65D29B;
+
+    --dark-grey: #333c44;
+    --darker-grey: #21272c;
+
+    /*fonts*/
+    --ff-primary:"Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+}
+
+
+/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: var(--ff-primary);
+    font-size: 16px;
+    background: #fff;
+    color: #fff;
+
+}
+
+
+ul {
+  list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+/*fonts config*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+/* ------------------------------------- 2. NAV BAR ---------------------------------- */
+
+.nav-header{
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #544173;
+}
+
+
+/* ------------------------------------- 3. IMAGE CONTAINER ---------------------------------- */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.box{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+.box:hover button{
+  visibility: visible;
+  transition: 2s;
+}
+
+.box:hover button,h1,h2{
+  
+}
+
+
+.box button{
+  color: inherit;
+  border: 1px solid #fff;
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  visibility: hidden;
+}
+
+.box1{
+  background-color: #363558;
+}
+
+.box2{
+background-color: #544173;
+}
+.box3{
+background-color: #DADCDC;
+}
+.box4{
+background-color: #65D29B;
+}
+
+
+/* ------------------------------------- 3. MODAL ---------------------------------- */
+
+.modal-overlay{
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -10;
+  top: 0;
+  left: 0;
+
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+
+
+
+.modal{
+  background: var(--background-color);
+  color: #363558;
+  width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  place-items: center;
+  position: relative;
+}
+
+.lecture{
+  padding: 0 80px;
+
+
+
+}
+
+.close-btn{
+  align-self: flex-end;
+  margin: 020px;
+  color: #363558;
+  font-size: 40px;
+}
+
+
+.close-btn:hover{
+  color: var(--background-header);
+  
+}
+
+
+.modal input, .modal button{
+    border:none;
+    background-image:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; 
+}
+
+.modal input{
+  margin-top: 20px;
+  padding: 0 20px;
+  background-color: var(--soft-red);
+  width: 250px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.submit-btn{
+  margin-bottom: 60px;
+  color: var(--grayish-blue);
+  background-color: var(--dark-desaturated-blue);
+  height: 70px ;
+  width: 90px;
+  border-radius: 35px;
+}
+
+.submit-btn:hover{
+  border: 1px solid var(--soft-red);
+  background-color: var(--dark-blue);
+}

@@ -1,0 +1,385 @@
+
+
+
+/* ------------------ Table of Contents ----------------- 
+0. Root
+1. Main config
+2. Green header
+7. Footer
+--------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    /*colors*/
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    
+    --Very-vark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --Black-Opacity: hsl(0, 0%, 0%);
+
+    /*fonts*/
+    --ff-primary:'Kumbh Sans', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+}
+
+
+/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: var(--ff-primary);
+    font-size: 16px;
+    background: #fff;
+    margin-bottom: 100px;
+
+}
+
+
+ul {
+  list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+/*fonts config*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+
+/* ------------------------------------- 2. NAV BAR ---------------------------------- */
+.nav-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*max-width: 1200px;*/
+    padding: 1rem;
+    border-bottom: 2px solid var(--Light-grayish-blue);
+}
+
+
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--Dark-grayish-blue);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  margin-right: 10px;
+}
+.nav-toggle:hover {
+  color: var(--orange);
+}
+
+/* -- links --*/
+.links a {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  
+}
+
+.show-links {
+  height: 10rem;
+
+}
+
+/* -- right-side --*/
+
+.cart-user{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top:0;
+    padding:20px;
+    align-items: center;
+}
+
+.avatar-img{
+    width: 30px;
+    margin-left:2rem;
+}
+
+.cart-num{
+  position: relative;
+  visibility: hidden;
+  left: 30px;
+  color: #fff;
+  font-size: 0.7rem;
+  background-color: var(--orange);
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 12px;
+  border-radius: 6px;
+}
+
+
+/* ------------------------------------- 3. IMAGE CONTAINER ---------------------------------- */
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 0px;
+    text-align: center;
+
+}
+
+
+
+.images-gallery{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.main-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+}
+
+
+.selected{
+  border: 2px solid var(--orange);
+  filter: opacity(50%);;
+}
+
+
+.gallery{
+  visibility:hidden;
+  display: flex;
+}
+
+.thumbnail-img{
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+  
+}
+
+
+.images-info{
+text-align: left;
+margin: 40px;
+}
+
+
+/* ------------------------------------- 3. TEXT CONTAINER ---------------------------------- */
+
+
+
+
+
+.images-info{
+    text-align: left;
+    padding: 0 0.8rem;
+    margin-top: -80px;
+    
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company{
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+/*input & input*/
+
+.buttonIn {
+        position: relative;
+    }
+
+
+
+
+input{
+    background: var(--Light-grayish-blue);
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    text-align: center; 
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.minus{
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  padding: 20px;
+  min-width: 20px;
+}
+.plus{
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    padding: 20px;
+    right: 10px;
+    max-width: 40px;
+}
+
+/*prices*/
+
+.last-price{
+    font-size: 1.2rem;
+    color: var(--Grayish-blue);
+    text-decoration: line-through;
+}
+
+.discount{
+    font-size: 1.1rem;
+    background-color: var(--pale-orange);
+    color: var(--orange);
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+/*add to cart*/
+.add-to-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--orange);
+    color: #fff;
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.add-to-cart img{
+    color: #fff;
+    padding-right: 10px;
+}
+
+
+
+/*MODAL*/
+
+.modal-btn {
+  margin-top: 2rem;
+  background: var(--clr-primary-5);
+  border-color: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.modal-btn:hover {
+  background: transparent;
+  color: var(--clr-primary-5);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(73, 166, 233, 0.5);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -10;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+.modal-container {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  width: 90vw;
+  height: 30vh;
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-red-dark);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.close-btn:hover {
+  color: var(--clr-red-light);
+  transform: scale(1.3);
+}

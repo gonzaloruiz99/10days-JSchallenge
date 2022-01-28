@@ -1,0 +1,46 @@
+@media screen and (min-width: 800px) {
+
+/* ------------------- nav bar ------------------- */
+
+    .nav-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*max-width: 1200px;*/
+    padding: 1rem 3rem;
+    
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+    .nav-header{
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .links{
+        margin-left: 2rem;
+        display: flex;
+        height: auto;
+    }
+
+/* ------------------- main ------------------- */
+
+.hero-slider{
+    height: 590px;
+}
+
+.icons{
+    height: 80px;
+}
+.icons li{
+    padding-bottom: 15px;
+    text-transform: uppercase;
+
+
+}
+
+
+}
